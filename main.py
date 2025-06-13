@@ -27,17 +27,17 @@ def draw():
         screen.fill((0, 0, 0))
         logo.draw()
     elif game_state == "menu":
-        screen.blit("bg_menu", (0, 0))  # imagem de fundo
+        screen.blit("bg_menu", (0, 0)) 
         screen.draw.text("Ninja Dash", center=(WIDTH // 2, 60), fontsize=50, color="white")
-        screen.draw.text("Start Game", center=(WIDTH // 2, 160), fontsize=40, color="white")
-        screen.draw.text("Sound On/Off", center=(WIDTH // 2, 220), fontsize=40, color="white")
-        screen.draw.text("Exit", center=(WIDTH // 2, 280), fontsize=40, color="white")
+        screen.draw.text("Começar", center=(WIDTH // 2, 160), fontsize=40, color="white")
+        screen.draw.text("Som On/Off", center=(WIDTH // 2, 220), fontsize=40, color="white")
+        screen.draw.text("Sair", center=(WIDTH // 2, 280), fontsize=40, color="white")
 
 def on_mouse_down(pos):
     global sound_on
     if game_state == "menu":
         if 130 < pos[1] < 190:
-            print("Start Game clicked")  # depois você implementa
+            print("Start Game clicked")  
         elif 190 < pos[1] < 250:
             sound_on = not sound_on
             if sound_on:
